@@ -10,17 +10,17 @@ const BoardList = () => {
 
   return (
     <div className='p-4'>
-      <ul>
+      <ul className='border'>
         {posts ? (
           posts.map(post => (
-            <li key={post.id}>
+            <li key={post.id} className='p-2 border-b'>
               <div className='flex items-end gap-4'>
                 <h3 className='font-bold text-xl'>{post.username}</h3>
-                <p className=''>
+                <p className='text-gray-400'>
                   {new Date(post.createDate).getDate()}d {new Date(post.createDate).getHours()}h {new Date(post.createDate).getMinutes()}m
                 </p>
               </div>
-              <p>{post.body}</p>
+              <p className='mt-2'>{post.body}</p>
             </li>
           ))
         ) : (

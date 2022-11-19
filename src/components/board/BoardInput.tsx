@@ -50,14 +50,14 @@ const BoardInput = () => {
   };
 
   return (
-    <form className='p-4 flex flex-col' onSubmit={e => e.preventDefault()}>
+    <form className='m-4 p-4 flex flex-col border' onSubmit={e => e.preventDefault()}>
       <h2 className='w-full font-bold text-xl mb-4'>홈</h2>
       <textarea
         onChange={({ target: { value } }) => {
           setBody(value);
           setErrorMessage('');
         }}
-        className='block rounded-xl p-2 w-full h-[120px] border resize-none focus:outline-none'
+        className='block p-2 w-full h-[100px] resize-none focus:outline-none'
         placeholder={'오늘의 글쓰기'}
         onKeyDown={onKeyDown}
         ref={textareaRef}
