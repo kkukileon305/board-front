@@ -13,3 +13,15 @@ export interface LoginResponseBody {
   token?: string;
   user?: User;
 }
+
+export interface PostsResponse {
+  posts: Post[];
+}
+
+export interface Post {
+  id: number;
+  createDate: Date;
+  uptateDate: Date;
+  username: string;
+  body: string;
+}
