@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-import { Post, PostsResponse } from '../../interface';
-import axiosInstance from '../../utils/axiosInstance';
+import { Post, PostsResponse } from '../../../interface';
+import axiosInstance from '../../../utils/axiosInstance';
 
 const BoardList = () => {
   const { data: posts } = useQuery<Post[]>({
@@ -10,7 +10,7 @@ const BoardList = () => {
 
   return (
     <div className='p-4'>
-      <ul className='border'>
+      <ul className='border flex flex-col-reverse'>
         {posts ? (
           posts.map(post => (
             <li key={post.id} className='p-2 border-b'>

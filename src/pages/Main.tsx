@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import BoardInput from '../components/board/BoardInput';
-import BoardList from '../components/board/BoardList';
+import BoardList from '../components/board/react-query/BoardList';
+import BoardSocketList from '../components/board/socket/BoardSocketList';
 import Nav from '../components/Nav';
 import UserInfo from '../components/UserInfo';
 
 const Main = () => {
+  const [isSocket, setIsSocket] = useState(false);
+
   return (
     <>
       <header className='h-[112px] flex flex-col justify-end bg-gray-400'>
@@ -15,7 +19,7 @@ const Main = () => {
       <main className='max-w-[1280px] w-full mx-auto px-4 flex'>
         <div className='w-[calc(100%-300px)]'>
           <BoardInput />
-          <BoardList />
+          {isSocket ? <BoardSocketList /> : <BoardList />}
         </div>
         <UserInfo />
       </main>

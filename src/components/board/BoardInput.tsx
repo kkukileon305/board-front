@@ -35,6 +35,7 @@ const BoardInput = () => {
           await mutateAsync();
           setDisabled(false);
           textareaRef.current.value = '';
+          setBody('');
         } catch (error) {
           setDisabled(false);
           const { response } = error as AxiosError<{ message: string }>;
