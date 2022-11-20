@@ -16,11 +16,11 @@ const Nav = () => {
           </button>
         </div>
       ) : (
-        <div className='flex items-center gap-4'>
-          <Link className='font-bold text-xl text-white bg-gray-700 px-4 py-2 rounded-full' to={'/login'}>
+        <div className='flex items-center gap-4 justify-end '>
+          <Link className='font-bold md:text-xl text-white bg-gray-700 px-4 py-2 rounded-full' to={'/login'}>
             Login
           </Link>
-          <Link className='font-bold text-xl text-white bg-gray-700 px-4 py-2 rounded-full' to={'/register'}>
+          <Link className='font-bold md:text-xl text-white bg-gray-700 px-4 py-2 rounded-full' to={'/register'}>
             Register
           </Link>
         </div>

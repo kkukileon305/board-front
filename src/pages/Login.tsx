@@ -52,7 +52,7 @@ const Login = () => {
 
   return (
     <div className='min-h-[100vh] flex justify-center items-center bg-gray-300'>
-      <form onSubmit={handleSubmit(onSubmit)} className='max-w-[500px] w-full aspect-auto p-8 border border-gray-400 bg-white rounded-xl flex flex-col justify-center'>
+      <form onSubmit={handleSubmit(onSubmit)} className='max-w-[500px] mx-4 w-full aspect-auto p-8 border border-gray-400 bg-white rounded-xl flex flex-col justify-center'>
         <h2 className='font-bold text-2xl mb-4'>로그인</h2>
         <Input //
           error={errors.email}
@@ -81,7 +81,7 @@ const Login = () => {
         />
         <div className='flex items-center justify-between mt-4 text-gray-400'>
           <Link className='font-bold text-blue-300' to={'/'}>
-            메인 페이지로 돌아가기
+            돌아가기
           </Link>
           <p className='text-right'>
             계정이 없다면{' '}

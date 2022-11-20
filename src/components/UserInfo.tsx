@@ -4,7 +4,7 @@ const UserInfo = () => {
   const user = useUserStore(store => store.user);
 
   return (
-    <div className='sticky top-0 w-[300px] h-[calc(100vh-112px)] p-4'>
+    <div className='absolute md:sticky top-0 left-full md:left-auto w-full md:w-[300px] h-[calc(100vh-112px)] p-4'>
       {user ? (
         <div className='flex gap-4 items-end'>
           <h2 className='font-bold text-xl'>{user.username}</h2>
