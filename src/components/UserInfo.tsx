@@ -1,18 +1,24 @@
+import { Link } from 'react-router-dom';
 import { useUserStore } from '../zustand/store';
 
 const UserInfo = () => {
   const user = useUserStore(store => store.user);
 
   return (
-    <div className='absolute md:sticky top-0 left-full md:left-auto w-full md:w-[300px] h-[calc(100vh-112px)] p-4'>
+    <div className='hidden p-4 mt-4 md:block sticky top-4 w-[300px] h-[calc(100vh-144px)] border'>
       {user ? (
-        <div className='flex gap-4 items-end'>
-          <h2 className='font-bold text-xl'>{user.username}</h2>
-          <p>{user.email}</p>
-        </div>
+        <>
+          <div className='flex gap-4 items-end'>
+            <h2 className='font-bold text-xl'>{user.username}</h2>
+            <p>{user.email}</p>
+          </div>
+          <p className='text-2xl text-right font-bold'>{user.position}</p>
+        </>
       ) : (
         <div>
-          <h2>로그인해주세요</h2>
+          <Link className='w-full aspect-square border flex items-center justify-center' to={'/login'}>
+            로그인
+          </Link>
         </div>
       )}
     </div>

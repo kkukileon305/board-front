@@ -8,6 +8,8 @@ interface UserStore {
   user: User | null;
   setLogin: (loginProps: { token: string; user: User }) => void;
   setLogout: () => void;
+  isModal: boolean;
+  setIsModal: (isModal: boolean) => void;
 }
 
 export const useUserStore = create(
@@ -17,5 +19,7 @@ export const useUserStore = create(
     user: null,
     setLogin: ({ token, user }) => set({ isLogin: true, token, user }),
     setLogout: () => set({ isLogin: false, token: '', user: null }),
+    isModal: false,
+    setIsModal: isModal => set({ isModal }),
   }))
 );

@@ -79,11 +79,11 @@ const Login = () => {
           value={disabled ? ' 로그인중...' : '로그인'}
           disabled={disabled}
         />
-        <div className='flex items-center justify-between mt-4 text-gray-400'>
+        <div className='flex flex-col items-end mt-4 text-gray-400'>
           <Link className='font-bold text-blue-300' to={'/'}>
             돌아가기
           </Link>
-          <p className='text-right'>
+          <p className='text-right mt-2'>
             계정이 없다면{' '}
             <Link className='font-bold text-blue-300' to={'/register'}>
               회원가입

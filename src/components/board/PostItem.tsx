@@ -6,7 +6,7 @@ interface PostItem {
 
 const PostItem = ({ post }: PostItem) => {
   return (
-    <li key={post.id} className='p-2 border-b'>
+    <li key={post.id} className='p-2 border-b overflow-hidden'>
       <div className='flex items-end gap-4'>
         <h3 className='font-bold text-xl'>{post.username}</h3>
         <p className='text-gray-400'>
