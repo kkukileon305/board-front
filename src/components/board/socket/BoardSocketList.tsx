@@ -21,7 +21,7 @@ const BoardSocketList = () => {
 
   return (
     <div className='py-4 flex flex-col'>
-      <ul className='border flex flex-col-reverse'>{!!posts.length ? posts.map(post => <PostItem post={post} key={post.id} />) : <h2>불러오는중...</h2>}</ul>
+      <ul className='flex flex-col-reverse overflow-hidden'>{!!posts.length ? posts.map(post => <PostItem post={post} key={post.id} />) : <h2>불러오는중...</h2>}</ul>
     </div>
   );
 };

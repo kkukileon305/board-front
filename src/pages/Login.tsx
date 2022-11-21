@@ -17,7 +17,6 @@ export type LoginInputs = {
 const Login = () => {
   const { setLogin, isLogin } = useUserStore(({ setLogin, isLogin }) => ({ setLogin, isLogin }));
   const [disabled, setDisabled] = useState(false);
-  useCheckLogin(isLogin);
 
   const [isLoginFail, setIsLoginFail] = useState(false);
 

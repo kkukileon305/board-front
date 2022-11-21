@@ -42,7 +42,7 @@ const BoardList = () => {
 
   return (
     <div className='py-4'>
-      <ul className='border'>{postsData?.pages.map(posts => posts.map(post => <PostItem post={post} key={post.id} />))}</ul>
+      <ul className='overflow-hidden'>{postsData?.pages.map(posts => posts.map(post => <PostItem post={post} key={post.id} />))}</ul>
       {!isEnd && (
         <div ref={spinnerRef} className='flex justify-center py-4'>
           <ImSpinner2 className='animate-spin' size={40} />

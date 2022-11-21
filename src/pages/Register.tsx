@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@tanstack/react-query';
 import Input from '../components/Input';
 import axiosInstance from '../utils/axiosInstance';
-import useCheckLogin from '../hooks/useCheckLogin';
-import { useUserStore } from '../zustand/store';
 import { AxiosError } from 'axios';
 
 export type Inputs = {
@@ -16,8 +14,7 @@ export type Inputs = {
 };
 
 const Register = () => {
-  const isLogin = useUserStore(store => store.isLogin);
-  const { navigate } = useCheckLogin(isLogin);
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -42,8 +39,6 @@ const Register = () => {
       const {
         data: { message },
       } = response;
-
-      console.log(message);
 
       setError('email', { message });
     }
